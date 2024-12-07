@@ -4,6 +4,10 @@ import PrimeVue from 'primevue/config';
 import { createApp } from 'vue';
 import App from './App.vue';
 
+import './style.scss';
+// Separate file in final bundle
+import('./icons.scss');
+
 const theme = definePreset(Nora, {
     semantic: {
         primary: {
