@@ -4,11 +4,8 @@
 
 <script setup lang="ts">
 import { useDark } from '@vueuse/core';
-import { greet } from 'vp9-binding';
-import { onMounted } from 'vue';
 
-onMounted(async () => {
-    greet();
-});
+import './lib';
+
 useDark({ storageKey: 'color' });
 </script>
