@@ -1,8 +1,8 @@
+import { definePreset } from '@primevue/themes';
 import Nora from '@primevue/themes/nora';
 import PrimeVue from 'primevue/config';
 import { createApp } from 'vue';
 import App from './App.vue';
-import { definePreset } from '@primevue/themes';
 
 const theme = definePreset(Nora, {
     semantic: {
@@ -28,7 +28,11 @@ app.use(PrimeVue, {
     theme: {
         preset: theme,
         options: {
-            darkModeSelector: '.dark'
+            darkModeSelector: '.dark',
+            cssLayer: {
+                name: 'primevue',
+                order: 'tailwind-base, primevue, tailwind-utilities'
+            }
         }
     }
 });

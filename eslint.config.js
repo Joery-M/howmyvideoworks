@@ -1,4 +1,6 @@
 import pluginJs from '@eslint/js';
+import prettierConfig from 'eslint-config-prettier';
+import prettierPlugin from 'eslint-plugin-prettier/recommended';
 import pluginTailwind from 'eslint-plugin-tailwindcss';
 import pluginVue from 'eslint-plugin-vue';
 import globals from 'globals';
@@ -12,5 +14,7 @@ export default [
     ...tseslint.configs.recommended,
     ...pluginVue.configs['flat/essential'],
     ...pluginTailwind.configs['flat/recommended'],
-    { files: ['**/*.vue'], languageOptions: { parserOptions: { parser: tseslint.parser } } }
+    { files: ['**/*.vue'], languageOptions: { parserOptions: { parser: tseslint.parser } } },
+    prettierPlugin,
+    prettierConfig
 ];
