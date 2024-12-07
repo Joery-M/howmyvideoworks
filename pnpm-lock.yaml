@@ -4,87 +4,103 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@fontsource-variable/inter':
-    specifier: ^5.1.0
-    version: 5.1.0
-  '@phosphor-icons/web':
-    specifier: ^2.1.1
-    version: 2.1.1
-  '@primevue/themes':
-    specifier: ^4.2.4
-    version: 4.2.4
-  '@vueuse/core':
-    specifier: ^12.0.0
-    version: 12.0.0(typescript@5.6.3)
-  primevue:
-    specifier: ^4.2.4
-    version: 4.2.4(vue@3.5.13)
-  tailwindcss-primeui:
-    specifier: ^0.3.4
-    version: 0.3.4(tailwindcss@3.4.16)
-  vue:
-    specifier: ^3.5.13
-    version: 3.5.13(typescript@5.6.3)
+importers:
 
-devDependencies:
-  '@eslint/js':
-    specifier: ^9.16.0
-    version: 9.16.0
-  '@vitejs/plugin-vue':
-    specifier: ^5.2.1
-    version: 5.2.1(vite@6.0.3)(vue@3.5.13)
-  autoprefixer:
-    specifier: ^10.4.20
-    version: 10.4.20(postcss@8.4.49)
-  eslint:
-    specifier: ^9.16.0
-    version: 9.16.0
-  eslint-config-prettier:
-    specifier: ^9.1.0
-    version: 9.1.0(eslint@9.16.0)
-  eslint-plugin-prettier:
-    specifier: ^5.2.1
-    version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@9.16.0)(prettier@3.4.2)
-  eslint-plugin-tailwindcss:
-    specifier: ^3.17.5
-    version: 3.17.5(tailwindcss@3.4.16)
-  eslint-plugin-vue:
-    specifier: ^9.32.0
-    version: 9.32.0(eslint@9.16.0)
-  globals:
-    specifier: ^15.13.0
-    version: 15.13.0
-  postcss:
-    specifier: ^8.4.49
-    version: 8.4.49
-  prettier:
-    specifier: 3.4.2
-    version: 3.4.2
-  prettier-plugin-tailwindcss:
-    specifier: 0.6.9
-    version: 0.6.9(prettier@3.4.2)
-  sass-embedded:
-    specifier: ^1.82.0
-    version: 1.82.0
-  tailwindcss:
-    specifier: ^3.4.16
-    version: 3.4.16
-  typescript:
-    specifier: ~5.6.2
-    version: 5.6.3
-  typescript-eslint:
-    specifier: ^8.17.0
-    version: 8.17.0(eslint@9.16.0)(typescript@5.6.3)
-  vite:
-    specifier: ^6.0.1
-    version: 6.0.3(sass-embedded@1.82.0)
-  vite-plugin-mkcert:
-    specifier: ^1.17.6
-    version: 1.17.6(vite@6.0.3)
-  vue-tsc:
-    specifier: ^2.1.10
-    version: 2.1.10(typescript@5.6.3)
+  .:
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.16.0
+        version: 9.16.0
+      eslint:
+        specifier: ^9.16.0
+        version: 9.16.0
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.0(eslint@9.16.0)
+      eslint-plugin-prettier:
+        specifier: ^5.2.1
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@9.16.0)(prettier@3.4.2)
+      eslint-plugin-tailwindcss:
+        specifier: ^3.17.5
+        version: 3.17.5(tailwindcss@3.4.16)
+      eslint-plugin-vue:
+        specifier: ^9.32.0
+        version: 9.32.0(eslint@9.16.0)
+      globals:
+        specifier: ^15.13.0
+        version: 15.13.0
+      premove:
+        specifier: ^4.0.0
+        version: 4.0.0
+      prettier:
+        specifier: 3.4.2
+        version: 3.4.2
+      prettier-plugin-tailwindcss:
+        specifier: 0.6.9
+        version: 0.6.9(prettier@3.4.2)
+      typescript:
+        specifier: ~5.6.2
+        version: 5.6.3
+
+  packages/vp9-binding/pkg: {}
+
+  packages/website:
+    dependencies:
+      '@fontsource-variable/inter':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@phosphor-icons/web':
+        specifier: ^2.1.1
+        version: 2.1.1
+      '@primevue/themes':
+        specifier: ^4.2.4
+        version: 4.2.4
+      '@vueuse/core':
+        specifier: ^12.0.0
+        version: 12.0.0(typescript@5.6.3)
+      primevue:
+        specifier: ^4.2.4
+        version: 4.2.4(vue@3.5.13)
+      tailwindcss-primeui:
+        specifier: ^0.3.4
+        version: 0.3.4(tailwindcss@3.4.16)
+      vp9-binding:
+        specifier: workspace:^
+        version: link:../vp9-binding/pkg
+      vue:
+        specifier: ^3.5.13
+        version: 3.5.13(typescript@5.6.3)
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: ^5.2.1
+        version: 5.2.1(vite@6.0.3)(vue@3.5.13)
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.20(postcss@8.4.49)
+      postcss:
+        specifier: ^8.4.49
+        version: 8.4.49
+      sass-embedded:
+        specifier: ^1.82.0
+        version: 1.82.0
+      tailwindcss:
+        specifier: ^3.4.16
+        version: 3.4.16
+      typescript-eslint:
+        specifier: ^8.17.0
+        version: 8.17.0(eslint@9.16.0)(typescript@5.6.3)
+      vite:
+        specifier: ^6.0.1
+        version: 6.0.3(sass-embedded@1.82.0)
+      vite-plugin-mkcert:
+        specifier: ^1.17.6
+        version: 1.17.6(vite@6.0.3)
+      vite-plugin-wasm:
+        specifier: ^3.3.0
+        version: 3.3.0(vite@6.0.3)
+      vue-tsc:
+        specifier: ^2.1.10
+        version: 2.1.10(typescript@5.6.3)
 
 packages:
 
@@ -2108,6 +2124,12 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
+  /premove@4.0.0:
+    resolution: {integrity: sha512-zim/Hr4+FVdCIM7zL9b9Z0Wfd5Ya3mnKtiuDv7L5lzYzanSq6cOcVJ7EFcgK4I0pt28l8H0jX/x3nyog380XgQ==}
+    engines: {node: '>=6'}
+    hasBin: true
+    dev: true
+
   /prettier-linter-helpers@1.0.0:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
@@ -2743,6 +2765,14 @@ packages:
       vite: 6.0.3(sass-embedded@1.82.0)
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vite-plugin-wasm@3.3.0(vite@6.0.3):
+    resolution: {integrity: sha512-tVhz6w+W9MVsOCHzxo6SSMSswCeIw4HTrXEi6qL3IRzATl83jl09JVO1djBqPSwfjgnpVHNLYcaMbaDX5WB/pg==}
+    peerDependencies:
+      vite: ^2 || ^3 || ^4 || ^5
+    dependencies:
+      vite: 6.0.3(sass-embedded@1.82.0)
     dev: true
 
   /vite@6.0.3(sass-embedded@1.82.0):
