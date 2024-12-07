@@ -9,12 +9,8 @@ html {
     font-size: 14px;
 
     font-family: "Inter Variable", sans-serif;
+}
 
-    body {
-        background-color: var(--p-surface-50);
-    }
-
-    &.dark body {
-        background-color: var(--p-surface-900);
-    }
+body {
+    @apply dark:bg-surface-950 bg-surface-50;
 }

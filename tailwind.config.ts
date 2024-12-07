@@ -1,10 +1,11 @@
-import { Config } from "tailwindcss";
-import primeui from "tailwindcss-primeui";
+import { Config } from 'tailwindcss';
+import primeui from 'tailwindcss-primeui';
 
 export default {
-    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,vue}"],
+    darkMode: 'selector',
+    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx,vue}'],
     theme: {
-        extend: {},
+        extend: {}
     },
-    plugins: [primeui],
+    plugins: [primeui]
 } as Config;
